@@ -7,72 +7,57 @@ import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
-    title: "Checkersvip.com",
-    subtitle: "Professional Online Checkers Platform",
-    description: "A comprehensive multiplayer American checkers platform designed for competitive play with real-time communication capabilities. Currently undergoing official recognition process with the American Checkers Federation (ACF).",
-    features: [
-      "Real-time multiplayer gameplay with WebSocket technology",
-      "Advanced drag-and-drop game mechanics using DnDKit",
-      "Live chat system with emoji support and moderation",
-      "Player ranking and tournament management system",
-      "Spectator mode with real-time game observation",
-      "Mobile-responsive design for cross-platform play",
-      "Game replay and analysis tools",
-      "Social features including friend lists and challenges"
-    ],
-    deliverables: [
-      "Fully functional web application deployed on production",
-      "Real-time multiplayer game engine",
-      "User authentication and profile management",
-      "Admin dashboard for game moderation",
-      "Tournament management system",
-      "Mobile-optimized responsive interface",
-      "Integration with payment systems for premium features"
-    ],
-    tech: ["Next.js", "NextUI", "Tailwind CSS", "DnDKit", "Fastify", "Redis", "Socket.io", "PostgreSQL", "Prisma", "JWT Authentication", "Stripe API"],
+    title: "Ministerio de Educación Pública",
+    subtitle: "MEP",
+    description: "official online portal of Costa Rica’s Ministry of Public Education (Ministerio de Educación Pública, MEP). It serves multiple audiences—students, families, teachers, and administrative staff—offering comprehensive access to educational resources, services, and information.",
+    tech: ["Emulsify", "Drupal", "SCSS", "Doker", "Storybook", "Twig" ],
     github: "https://github.com",
-    live: "https://checkersvip.com",
+    live: "https://www.mep.go.cr/",
     gradient: "from-blue-500 to-cyan-500",
     status: "Live",
     category: "Web Application",
     highlight: "Featured",
-    timeline: "6 months",
-    clientType: "Gaming Industry"
+    timeline: "1 year",
+    clientType: "Goverment"
   },
   {
-    title: "AskRudy.ai",
-    subtitle: "AI-Powered Document Intelligence Platform",
-    description: "An advanced RAG-based AI chatbot that revolutionizes document interaction through multilingual translation and intelligent conversation capabilities. Features cutting-edge OpenAI multimodal technology for screenshot analysis and real-time text translation.",
-    features: [
-      "RAG (Retrieval-Augmented Generation) architecture for accurate responses",
-      "Multi-format document support (PDF, DOCX, TXT, images)",
-      "OpenAI GPT-4 Vision integration for screenshot analysis",
-      "Real-time multilingual translation (50+ languages)",
-      "Intelligent document chunking and vector embeddings",
-      "Conversational AI with context-aware responses",
-      "Document highlighting and annotation tools",
-      "Export capabilities for translations and summaries",
-      "Collaborative workspace for team document analysis"
-    ],
-    deliverables: [
-      "Production-ready AI chatbot platform",
-      "Document processing pipeline with OCR capabilities",
-      "Multi-language translation engine",
-      "User dashboard with document management",
-      "Subscription management with Stripe integration",
-      "API documentation and integration guides",
-      "Mobile-responsive Progressive Web App",
-      "Analytics dashboard for usage tracking"
-    ],
-    tech: ["Next.js", "NextUI", "Vercel AI SDK", "React-PDF", "Firebase", "LangChain", "OpenAI GPT-4", "Pinecone", "Stripe", "Tesseract.js", "PDF.js", "Zustand"],
-    github: "https://github.com",
-    live: "https://askrudy.ai",
+    title: "Intelicolab",
+    subtitle: "Company information site",
+    description: "Company information site.",
+    tech: ["Next.js", "MaterialUI", "Vercel", "Drupal", "GraphQL",],
+    live: "https://www.intelicolab.com/",
     gradient: "from-purple-500 to-pink-500",
     status: "Live",
-    category: "AI Platform",
+    category: "Web Application",
     highlight: "Featured",
-    timeline: "8 months",
-    clientType: "EdTech & Enterprise"
+    timeline: "4 months",
+    clientType: "Intelicolab"
+  },
+  {
+    title: "BAC",
+    subtitle: "BAC",
+    description: "Vehicle catalog for BAC's information site",
+    tech: ["Emulsify", "PHP", "Docker", "Drupal",],
+    live: "https://www.baccredomatic.com/es-cr/personas/catalogo-de-vehiculos",
+    gradient: "from-blue-500 to-cyan-500",
+    status: "Live",
+    category: "Web Application",
+    highlight: "Featured",
+    timeline: "2 Weeks",
+    clientType: "BAC"
+  },
+  {
+    title: "Soy Niña",
+    subtitle: "BAC",
+    description: "Informative site for non-profit institution",
+    tech: ["Emulsify", "PHP", "Docker", "Drupal",],
+    live: "https://soynina.org/",
+    gradient: "from-purple-500 to-pink-500",
+    status: "Live",
+    category: "Web Application",
+    highlight: "Featured",
+    timeline: "2 Weeks",
+    clientType: "BAC"
   }
 ];
 
@@ -269,13 +254,13 @@ export default function ProjectsSection() {
 
                     {/* Action Buttons */}
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-                      <Link
+                      {/* <Link
                         href={project.github}
                         className="flex items-center justify-center gap-2 md:gap-3 px-4 py-2.5 md:px-6 md:py-3 bg-white/20 backdrop-blur-sm border border-white/30 text-white rounded-lg md:rounded-xl hover:bg-white/30 transition-all duration-300 text-sm font-medium shadow-lg hover:shadow-xl active:scale-95"
                       >
                         <Icon icon="solar:code-bold" width={18} height={18} className="md:w-5 md:h-5" />
                         <span>View Repository</span>
-                      </Link>
+                      </Link> */}
 
                       <Link
                         href={project.live}
@@ -293,7 +278,7 @@ export default function ProjectsSection() {
                   <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
 
                     {/* Features Section */}
-                    <div>
+                    {/* <div>
                       <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                         <div className="p-1.5 md:p-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg md:rounded-xl">
                           <Icon icon="solar:settings-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
@@ -317,17 +302,17 @@ export default function ProjectsSection() {
                           </motion.li>
                         ))}
                       </ul>
-                    </div>
+                    </div> */}
 
                     {/* Deliverables Section */}
-                    <div className="mt-6 lg:mt-0">
+                    {/* <div className="mt-6 lg:mt-0">
                       <h4 className="text-lg md:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-2 md:gap-3">
                         <div className="p-1.5 md:p-2 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg md:rounded-xl">
                           <Icon icon="solar:delivery-bold" className="text-white w-[18px] h-[18px] md:w-6 md:h-6" />
                         </div>
                         <span>Deliverables</span>
-                      </h4>
-                      <ul className="space-y-2.5 md:space-y-3">
+                      </h4> */}
+                      {/* <ul className="space-y-2.5 md:space-y-3">
                         {project.deliverables.map((deliverable, deliverableIndex) => (
                           <motion.li
                             key={deliverableIndex}
@@ -343,8 +328,8 @@ export default function ProjectsSection() {
                             <span className="text-sm md:text-base leading-relaxed">{deliverable}</span>
                           </motion.li>
                         ))}
-                      </ul>
-                    </div>
+                      </ul> */}
+                    {/* </div> */}
                   </div>
 
                   {/* Tech Stack Section */}
@@ -377,8 +362,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Call to Action */}
-
-        <motion.div
+        {/* <motion.div
           variants={itemVariants}
           className="text-center mt-12 md:mt-16 lg:mt-20 px-4 mb-12"
         >
@@ -396,7 +380,7 @@ export default function ProjectsSection() {
               </span>
             </motion.div>
           </Link>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.section>
   );

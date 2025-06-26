@@ -6,37 +6,94 @@ import SectionHeader from "./SectionHeader";
 
 const experience = [
   {
-    role: "Software Developer",
-    company: "Upwork",
-    period: "January 2020 — Present",
-    type: "Freelance",
-    companyIcon: "fa6-brands:square-upwork",
+    role: "Analista de Software",
+    company: "Infosgroup Costa Rica",
+    period: "Oct. 2023 – Jan. 2025",
+    type: "Contract",
     companyColor: "from-green-500 to-green-600",
-    description: "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
+    description:
+      "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
     achievements: [
-      "Achieved Top-Rated status with a 91% job success score",
-      "Completed 10+ projects focusing on scalable solutions",
-      "Consistently praised for skillfulness, quick learning, and strong communication",
-      "Earned repeated engagements through reliability and expertise"
+      `I developed a web application in Angular for CONAVI (Consejo Nacional de Vialidad), which allowed the
+      company to facilitate the delivery and management of procedures for heavy vehicle owners at weigh
+      stations across the country.`,
+      `The inventory traceability module, developed in Angular for the web version and Ionic for the mobile
+      device version, in the Telecable application, enabled company employees to have better control over asset
+      inventory.`,
+      `The Automatic Charges module, implemented in the Telecable users application and developed in React
+      Native, allows users to link their bank cards so that automatic charges for their services can be made.`,
+      `For the Colégio de Abogados y Abogadas de Costa Rica, I developed a web application in React that 
+      allows managing the content displayed in the mobile application, which was also developed by the
+      company, and I participated in its creation. This mobile application facilitates access for association
+      members to relevant information`,
+      `I was responsible for creating user manuals for the developed applications.`,
+      `I conducted functionality testing on the applications before their deployment`,
+      `I participated in the maintenance of other applications developed in Angular.`,
     ],
-    technologies: ["JavaScript", "Python", "Node.js", "AWS", "GCP", "OpenAI API", "LangChain"]
+    technologies: [
+      "JavaScript",
+      "React",
+      "Bootstrap",
+      "Angular",
+      "Ionic",
+      "React Native",
+    ],
   },
   {
-    role: "HIMS Master Trainer / PACS Specialist",
-    company: "Public Health Organization, Islamabad",
-    period: "July 2019 — Present",
-    type: "Full-time",
-    companyColor: "from-blue-500 to-blue-600",
-    companyIcon: "mdi:hospital-building",
-    description: "Spearheaded organizational transformation from paper-based manual systems to completely integrated HIMS and PACS (Picture Archiving and Communication System).",
+    role: "Frontend Engineer",
+    company: "Four Kitchens",
+    period: "Oct. 2022 – Jul. 2023",
+    type: "Contract",
+    companyColor: "from-green-500 to-green-600",
+    description:
+      "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
     achievements: [
-      "Led integration of 45+ radiology machines (CT, MRI, X-Ray, Ultrasound)",
-      "Ensured active monitoring for integration issues",
-      "Acted as master trainer and led support team",
-      "Communicated issues and requirements to backend teams"
+      `Developed multiple websites using CMS platforms such as Drupal and WordPress, creating custom
+modules and adapting themes, while ensuring seamless integration with modern frameworks like Next.js
+and Remix.`,
+      `As a workflow, I used Gitflow for branch-based development, conducted review processes through Pull
+Requests, and performed continuous integration via CircleCI, utilizing automated linting, clean code
+standards, and accessibility testing, among other practices.`,
     ],
-    technologies: ["HIMS", "PACS", "System Integration", "Healthcare IT", "Training & Support"]
-  }
+    technologies: [
+      "JavaScript",
+      "TypeScript",
+      "NextJs",
+      "Remix",
+      "Drupal",
+      "Emulsify",
+      "CSS",
+    ],
+  },
+  {
+    role: "Desarrolladora Frontend",
+    company: "Manatí",
+    period: "Jan. 2021 - Oct. 2022",
+    type: "Contract",
+    companyColor: "from-green-500 to-green-600",
+    description:
+      "Delivered high-quality projects across diverse domains, including web and mobile applications, API development, and cloud integrations (AWS, GCP).",
+    achievements: [
+      `Developed multiple websites using CMS platforms such as Drupal and WordPress, creating custom
+      modules and adapting themes, while ensuring seamless integration with modern frameworks like Next.js
+      and Emulsify, for informational websites developed to clients like Intelicolab, TTP (The Talent Place) and
+      INEC (Instituto Nacional de Censos y Estadisticas de Costa Rica).`,
+      `I worked on different modules for the BAC informational website.`,
+      `Thanks to the website developed for the Soy Niña foundation, people have access to information on how
+      they can contribute to social causes.`,
+      `For the MEP (Ministerio de Educación Pública), an informative, visually appealing, and fresh website was
+      created for educators across the country.`,
+    ],
+    technologies: [
+      "JavaScript",
+      "TypeScript",
+      "NextJs",
+      "Remix",
+      "Drupal",
+      "Emulsify",
+      "CSS",
+    ],
+  },
 ];
 
 export default function ExperienceSection() {
@@ -124,14 +181,10 @@ export default function ExperienceSection() {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className={`w-16 h-16 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-gradient-to-br ${exp.companyColor} flex items-center justify-center shadow-xl md:shadow-2xl mb-3 md:mb-4 relative overflow-hidden group-hover:shadow-2xl md:group-hover:shadow-3xl transition-all duration-500`}
                   >
-                    <Icon
-                      icon={exp.companyIcon!}
-                      className="text-white w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 relative z-10"
-                      width={40}
-                      height={40}
-                    />
                     {/* Animated background gradient */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${exp.companyColor} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${exp.companyColor} opacity-0 group-hover:opacity-20 transition-opacity duration-500`}
+                    />
                   </motion.div>
                 </div>
 
@@ -145,7 +198,12 @@ export default function ExperienceSection() {
                       transition={{ delay: 0.2 }}
                       className="flex items-center gap-2 md:gap-3 text-gray-600 dark:text-gray-400 text-xs md:text-sm font-medium"
                     >
-                      <Icon icon="solar:calendar-outline" width={14} height={14} className="md:w-4 md:h-4" />
+                      <Icon
+                        icon="solar:calendar-outline"
+                        width={14}
+                        height={14}
+                        className="md:w-4 md:h-4"
+                      />
                       <span>{exp.period}</span>
                     </motion.div>
 
@@ -186,7 +244,12 @@ export default function ExperienceSection() {
                     className="space-y-3 md:space-y-4"
                   >
                     <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
-                      <Icon icon="solar:cup-star-bold" className="text-amber-500" width={22} height={22} />
+                      <Icon
+                        icon="solar:cup-star-bold"
+                        className="text-amber-500"
+                        width={22}
+                        height={22}
+                      />
                       Key Achievements
                     </h4>
 
@@ -218,7 +281,12 @@ export default function ExperienceSection() {
                     className="space-y-3 md:space-y-4"
                   >
                     <h4 className="text-base md:text-lg font-bold text-gray-800 dark:text-gray-200 flex items-center gap-2">
-                      <Icon icon="solar:programming-bold" className="text-purple-500" width={18} height={18} />
+                      <Icon
+                        icon="solar:programming-bold"
+                        className="text-purple-500"
+                        width={18}
+                        height={18}
+                      />
                       Technologies & Skills
                     </h4>
 
@@ -261,31 +329,43 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           className="mt-16 md:mt-24 text-center px-4 md:px-6"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-4xl mx-auto">
             <motion.div
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-blue-50/50 to-blue-100/30 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200/30 dark:border-blue-800/20 hover:border-blue-300/50 dark:hover:border-blue-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">5+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Years Experience</div>
+              <div className="text-4xl md:text-5xl font-bold text-blue-600 dark:text-blue-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
+                5+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">
+                Years Experience
+              </div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-green-50/50 to-green-100/30 dark:from-green-950/20 dark:to-green-900/10 border border-green-200/30 dark:border-green-800/20 hover:border-green-300/50 dark:hover:border-green-600/30 transition-all duration-500"
             >
-              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">50+</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Projects Completed</div>
+              <div className="text-4xl md:text-5xl font-bold text-green-600 dark:text-green-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
+                50+
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">
+                Projects Completed
+              </div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.05, y: -5 }}
               className="group p-6 md:p-8 rounded-xl md:rounded-2xl bg-gradient-to-br from-purple-50/50 to-purple-100/30 dark:from-purple-950/20 dark:to-purple-900/10 border border-purple-200/30 dark:border-purple-800/20 hover:border-purple-300/50 dark:hover:border-purple-600/30 transition-all duration-500 sm:col-span-2 lg:col-span-1"
             >
-              <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">91%</div>
-              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">Success Rate</div>
+              <div className="text-4xl md:text-5xl font-bold text-purple-600 dark:text-purple-400 mb-2 md:mb-3 group-hover:scale-110 transition-transform duration-300">
+                91%
+              </div>
+              <div className="text-gray-600 dark:text-gray-400 font-medium text-base md:text-lg">
+                Success Rate
+              </div>
             </motion.div>
-          </div>
+          </div> */}
         </motion.div>
       </div>
     </motion.section>

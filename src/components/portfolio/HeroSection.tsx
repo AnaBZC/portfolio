@@ -46,22 +46,12 @@ export default function HeroSection() {
           transition={{ delay: 0.2, duration: 0.6 }}
         >
           <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 dark:from-white dark:via-gray-100 dark:to-white bg-clip-text text-transparent z-10">
-            Muhammad Ramazan
+            Ana Belén Zúñiga Castro
           </span>
         </motion.h1>
 
         {/* Typewriter Role Component */}
         <TypewriterRole />
-
-        {/* Tagline */}
-        <motion.p
-          className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          Crafting exceptional digital experiences with clean code and thoughtful design
-        </motion.p>
 
         {/* Social Links - keeping exactly the same */}
         <motion.div
@@ -71,9 +61,9 @@ export default function HeroSection() {
           transition={{ delay: 1.0 }}
         >
           {[
-            { href: "https://github.com/lightify97", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
-            { href: "https://linkedin.com/in/m-ramazan", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
-            { href: "mailto:lightify6@gmail.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
+            { href: "https://github.com/AnaBZC", icon: "simple-icons:github", label: "GitHub", color: "hover:text-gray-900 dark:hover:text-white" },
+            { href: "https://www.linkedin.com/in/ana-belen-zc/", icon: "skill-icons:linkedin", label: "LinkedIn", color: "hover:text-blue-600" },
+            { href: "mailto:anab1996@gmail.com", icon: "material-icon-theme:email", label: "Email", color: "hover:text-green-600" }
           ].map((link) => (
             <motion.div key={link.label} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
@@ -129,7 +119,7 @@ export default function HeroSection() {
           />
           <Link href="#contact">
             <span className="text-green-700 dark:text-green-300 text-sm font-medium">
-              Available for projects
+              Available for work or projects
             </span>
           </Link>
         </motion.div>
